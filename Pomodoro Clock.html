@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:700" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="pomodoroCSS.css">
+    <title>Pomodoro</title>
+</head>
+<body>
+<div ng-app="clockApp">
+
+
+
+    <div ng-controller = "clockCtrl">
+        <h1>Pomodoro Clock</h1>
+        <div id="content">
+            <div id="buttons">
+                <span class="break">Break</span><span class="session">Session</span>
+                <span class="break">
+
+                    <br>
+        <span class="symbol" ng-click="breakMinus()">-</span><span >{{break}}</span><span class="symbol" ng-click="breakPlus()">+</span>
+</span>
+                <span class="session">
+        <span class="symbol" ng-click="sessionMinus()">-</span><span >{{session}}</span><span class="symbol" ng-click="sessionPlus()">+</span>
+            </span>
+            </div>
+
+            <div id="timer"ng-click="click()">
+                <p>{{type}}</p>
+                <p>
+                    {{timer | secondsFormat}}
+                </p>
+            </div>
+        </div>
+
+
+
+
+    </div>
+</div>
+
+
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js"></script>
+<script src="PomodoroJS.js"></script>
+
+<!--<footer>Created by Rakesh.M</footer>-->
+</body>
+</html>
